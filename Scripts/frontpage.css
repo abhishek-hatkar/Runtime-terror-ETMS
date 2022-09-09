@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #3c484e;
+  font-family: "Open Sans", sans-serif;
+  background: #ffffff;
+  /* background-image: linear-gradient(
+    45deg,
+    #8607fd 0,
+    #b370f3 71%,
+    #fa75f3 100%
+  ); */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Section {
+  width: 100%;
+  max-width: 980px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.Button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  line-height: 14px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: #030303;
+  background-color: #222222;
+}
+
+.Button__one {
+  padding: 40px 100px;
+  border-radius: 50px;
+  background-color: lightskyblue;
+  transition: all 0.25s ease;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.Button__one:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 20px 40px 0px rgb(0 0 0 / 10%);
+}
+
+.Button__two {
+  padding: 40px 100px;
+  border-radius: 50px;
+  background-color: lightskyblue;
+  transition: all 0.25s ease;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.Button__two:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 20px 40px 0px rgb(0 0 0 / 10%);
+}
+
+.Button__three {
+  padding: 40px 100px;
+  border-radius: 50px;
+  background-color: lightskyblue;
+  transition: all 0.25s ease;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.Button__three:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 20px 40px 0px rgb(0 0 0 / 10%);
+}
+
+
+@keyframes line1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes line2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+@keyframes line3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+@keyframes line4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
