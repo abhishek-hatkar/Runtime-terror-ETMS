@@ -1,0 +1,30 @@
+`@admin.route('/roles/add', methods=['GET', 'POST'])
+@login_required
+def add_employee():
+    """
+    Add a employee to the database
+    """
+    check_admin()
+
+    add_role = True
+
+    form = EmployeeForm()
+    if form.validate_on_submit():
+        role = Employee(name=form.name.data,
+                    description=form.description.data)
+
+        try:
+        
+            db.session.add(employee)
+            db.session.commit()
+            flash('You have successfully added a new employee.')
+        except:
+            
+            flash('Error: employee name already exists.')
+
+        # redirect to the employess page
+        return redirect(url_for(' '))
+
+    # load employee template
+    return render_template(' ', add_employee=add_employee,
+                           form=form, title='Add EMPLOYEE')

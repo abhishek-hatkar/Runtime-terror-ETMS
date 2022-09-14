@@ -11,13 +11,16 @@ body {
   padding: 0;
   color: #3c484e;
   font-family: "Open Sans", sans-serif;
-  background: #ffffff;
-  /* background-image: linear-gradient(
-    45deg,
-    #8607fd 0,
-    #b370f3 71%,
-    #fa75f3 100%
-  ); */
+  /* background: fixed; */
+  /* background: #ffffff; */
+  background-image: url('pexels-marc-mueller-380768.png');
+  /* static\images\pexels-marc-mueller-380768.png */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* background-color: transparent; */
+  
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -44,14 +47,14 @@ body {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  color: #030303;
+  color:white;
   background-color: #222222;
 }
 
 .Button__one {
   padding: 40px 100px;
   border-radius: 50px;
-  background-color: lightskyblue;
+  background:rgb(85, 85, 255);
   transition: all 0.25s ease;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
 }
@@ -63,7 +66,7 @@ body {
 .Button__two {
   padding: 40px 100px;
   border-radius: 50px;
-  background-color: lightskyblue;
+  background:rgb(85, 85, 255);
   transition: all 0.25s ease;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
 }
@@ -75,7 +78,7 @@ body {
 .Button__three {
   padding: 40px 100px;
   border-radius: 50px;
-  background-color: lightskyblue;
+  background: rgb(85, 85, 255);
   transition: all 0.25s ease;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
 }
@@ -122,3 +125,160 @@ body {
     bottom: 100%;
   }
 }
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: arial, sans-serif;
+  text-transform: capitalize;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0 1px 8px rgb(180, 180, 180);
+  user-select: none;
+}
+
+header nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header nav > ul > li {
+  width: 100%;
+  padding: 1rem;
+}
+
+header nav > ul > li > a {
+  text-decoration: none;
+  color: rgba(10, 10, 10, 0.5);
+}
+
+header nav > ul > li > a:hover {
+  color: rgb(10, 10, 10);
+}
+
+header nav > ul > li:nth-child(4) > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+header nav > ul > li:nth-child(4) > a > span {
+  width: max-content;
+}
+
+header nav > ul > li:nth-child(4) > a > span:first-child {
+  color: rgb(55, 55, 255);
+  font-size: 1.5rem;
+}
+
+header nav > ul > li:nth-child(4) > a > span:last-child {
+  color: rgba(10, 10, 10, 0.66);
+  font-size: 0.9rem;
+}
+
+header input,
+header label {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    position: relative;
+  }
+  header nav > label {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #3339;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  header label span {
+    width: 100%;
+    height: 5px;
+    background: black;
+  }
+
+  header nav > ul {
+    flex-direction: column;
+  }
+
+  header nav > ul > li:nth-child(4) {
+    order: -1;
+  }
+
+  header nav > ul > li:not(:nth-child(4)) {
+    display: none;
+  }
+
+  header nav > input:checked ~ ul > li {
+    display: block;
+  }
+}
+
+
+
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #263238;
+  text-align: center;
+  color: #f4f4f4;
+  font-size: .2rem;
+}
+
+.icons{
+  padding-top: 1rem;
+}
+
+.icons a{
+  text-decoration: none;
+  font-size: .2rem;
+  margin: 0.5rem;
+  color: #f4f4f4;
+}
+
+.company-name{
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 500px){
+  html{
+      font-size: 50%;
+  }
+}    
+
+@media(min-width: 501px) and (max-width: 768px){
+  html{
+  font-size: 50%;
+  }
+}    
