@@ -1,13 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Home</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #3c484e;
+  font-family: "Open Sans", sans-serif;
+  /* background: fixed; */
+  /* background: #ffffff; */
+  background-image: url('pexels-marc-mueller-380768.png');
+  /* static\images\pexels-marc-mueller-380768.png */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /* background-color: transparent; */
   
-    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='frontpage.css')}}">
-    <title>HOME</title>
-  </head>
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Section {
+  width: 100%;
+  max-width: 980px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.Button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  line-height: 14px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color:white;
+  background-color: #222222;
+}
+
+.Button__one {
+  padding: 40px 100px;
+  border-radius: 50px;
+  background:rgb(85, 85, 255);
+  transition: all 0.25s ease;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.Button__one:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 20px 40px 0px rgb(0 0 0 / 10%);
+}
+
+.Button__two {
+  padding: 40px 100px;
+  border-radius: 50px;
+  background:rgb(85, 85, 255);
+  transition: all 0.25s ease;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.Button__two:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 20px 40px 0px rgb(0 0 0 / 10%);
+}
+
+.Button__three {
+  padding: 40px 100px;
+  border-radius: 50px;
+  background: rgb(85, 85, 255);
+  transition: all 0.25s ease;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.Button__three:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 20px 40px 0px rgb(0 0 0 / 10%);
+}
+
+
+@keyframes line1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes line2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+@keyframes line3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+@keyframes line4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: arial, sans-serif;
+  text-transform: capitalize;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0 1px 8px rgb(180, 180, 180);
+  user-select: none;
+}
+
+header nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header nav > ul > li {
+  width: 100%;
+  padding: 1rem;
+}
+
+header nav > ul > li > a {
+  text-decoration: none;
+  color: rgba(10, 10, 10, 0.5);
+}
+
+header nav > ul > li > a:hover {
+  color: rgb(10, 10, 10);
+}
+
+header nav > ul > li:nth-child(4) > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+header nav > ul > li:nth-child(4) > a > span {
+  width: max-content;
+}
+
+header nav > ul > li:nth-child(4) > a > span:first-child {
+  color: rgb(55, 55, 255);
+  font-size: 1.5rem;
+}
+
+header nav > ul > li:nth-child(4) > a > span:last-child {
+  color: rgba(10, 10, 10, 0.66);
+  font-size: 0.9rem;
+}
+
+header input,
+header label {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    position: relative;
+  }
+  header nav > label {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #3339;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  header label span {
+    width: 100%;
+    height: 5px;
+    background: black;
+  }
+
+  header nav > ul {
+    flex-direction: column;
+  }
+
+  header nav > ul > li:nth-child(4) {
+    order: -1;
+  }
+
+  header nav > ul > li:not(:nth-child(4)) {
+    display: none;
+  }
+
+  header nav > input:checked ~ ul > li {
+    display: block;
+  }
+}
+
+
+
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #263238;
+  text-align: center;
+  color: #f4f4f4;
+  font-size: .2rem;
+}
+
+.icons{
+  padding-top: 1rem;
+}
+
+.icons a{
+  text-decoration: none;
+  font-size: .2rem;
+  margin: 0.5rem;
+  color: #f4f4f4;
+}
+
+.company-name{
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 500px){
+  html{
+      font-size: 50%;
+  }
+}    
+
+@media(min-width: 501px) and (max-width: 768px){
+  html{
+  font-size: 50%;
+  }
+}    
+
+
+</style>
+</head>
   <header>
     <nav class="container">
       <label for="hamburger">
@@ -32,23 +322,18 @@
       </ul>
     </nav>
   </header>
-  
-  <section class="Section">
-      <button onclick="document.location='{{url_for('AdminLogin')}}'"class="Button Button__one" >ADMIN</button>
-      <button onclick="document.location='{{url_for('HrLogin')}}'"class="Button Button__two">HR</button>
-      <button class="Button Button__three">EMPLOYEE</button>
-    </section>
-   
-    <html lang="en">
 
-
+<section class="Section">
+  <button onclick="document.location='{{url_for('AdminLogin')}}'"class="Button Button__one" >ADMIN</button>
+  <button onclick="document.location='{{url_for('HrLogin')}}'"class="Button Button__two">HR</button>
+  <button class="Button Button__three">EMPLOYEE</button>
+</section>
 <body>
-    <footer class="footer">
-            <p class="company-name">
-                Copyright © 2022 HexaCorp LLC. All rights reserved.
-            </p>
-        </div>
-    </footer>
+<footer class="footer">
+        <p class="company-name">
+            Copyright © 2022 HexaCorp LLC. All rights reserved.
+        </p>
+    </div>
+</footer>
 </body>
-
 </html>

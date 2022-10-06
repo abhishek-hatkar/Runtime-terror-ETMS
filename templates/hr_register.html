@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Hr Sign in</title>
+<title>Hr Register</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -13,9 +13,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <style>
 body {
-	color: #566787;
-	background: ("pexels-marc-mueller-380768");
-	font-size: 13px;
+	font-family: 'Varela Round', sans-serif;
 }
 .form-control {
 	box-shadow: none;		
@@ -45,9 +43,6 @@ body {
 .navbar .navbar-brand b {
 	color: #33cabb;		
 }
-/* .navbar .navbar-brand h4 {
-	color: #000000;		
-} */
 .navbar .form-inline {
 	display: inline-block;
 }
@@ -225,7 +220,6 @@ body {
 .signup-form {
 	width: 400px;
 	margin: 0 auto;
-    margin-top:110px;
 	padding: 30px 0;
   	font-size: 15px;
 }
@@ -314,7 +308,16 @@ $(document).on("click", ".action-buttons .dropdown-menu", function(e){
 	  </nav>
 <div class="signup-form">
     <form action="/examples/actions/confirmation.php" method="post">
-		<h2>Login</h2>
+		<h2>Register</h2>
+        <div class="form-group">
+			<div class="row">
+				<div class="col"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
+				<div class="col"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
+			</div>        	
+        </div>
+        <div class="form-group">
+        	<input type="text" class="form-control" name="employee id" placeholder="ID" required="required">
+        </div>
         <div class="form-group">
         	<input type="email" class="form-control" name="email" placeholder="Email" required="required">
         </div>
@@ -322,10 +325,16 @@ $(document).on("click", ".action-buttons .dropdown-menu", function(e){
             <input type="password" class="form-control" name="password" placeholder="Password" required="required">
         </div>
 		<div class="form-group">
-            <button type="submit" class="btn btn-success btn-lg btn-block">Login Now</button>
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+        </div>        
+        <div class="form-group">
+			<label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+		</div>
+		<div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
         </div>
     </form>
-	<div class="text-center">Don't have an account? <a href="hr_register.html">Sign up</a></div>
+	<div class="text-center">Already have an account? <a href="#">Sign in</a></div>
 </div>
 </body>
 </html>
