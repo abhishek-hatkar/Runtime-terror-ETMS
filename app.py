@@ -7,13 +7,6 @@ from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String
 
 
 app = Flask(__name__)
-db = SQLAlchemy(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-
-class user(db.Model, UserMixin):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(20), nullable=False)
-    password = db.Column(db.String(80), nullable=False)
     
 @app.route("/")
 def home():
@@ -33,7 +26,7 @@ def HrLogin():
 
 @app.route("/hr_register")
 def HrRegister():
-    return render_template('hr_login.html')
+    return render_template('hr_register.html')
 
 @app.route("/admin_page")
 def AdminPage():

@@ -13,10 +13,15 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <style>
 body {
-	color: #566787;
-	background: ("pexels-marc-mueller-380768");
+	color: #ffffff;
+	background-image: url('https://images.pexels.com/photos/267507/pexels-photo-267507.jpeg');
 	font-size: 13px;
+	background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
+
 .form-control {
 	box-shadow: none;		
 	font-weight: normal;
@@ -202,15 +207,15 @@ body {
 		width: 100%;
 	}
 }
-body {
+/* body {
 	color: #fff;
 	background-image: url('pexels-marc-mueller-380768.png');
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size:cover;
-	font-family: 'Roboto', sans-serif;
-}
+	font-family: 'Roboto', sans-serif; */
+/* } */
 .form-control {
 	height: 40px;
 	box-shadow: none;
@@ -223,9 +228,9 @@ body {
 	border-radius: 3px;
 }
 .signup-form {
-	width: 400px;
+	width: 350px;
 	margin: 0 auto;
-    margin-top:110px;
+    margin-top:80px;
 	padding: 30px 0;
   	font-size: 15px;
 }
@@ -304,9 +309,9 @@ $(document).on("click", ".action-buttons .dropdown-menu", function(e){
 </script>
 </head> 
 <body>
-	<nav class="navbar navbar-dark bg-primary">
+	<nav class="navbar navbar-dark bg-secondary">
 		<div class="container-fluid">
-		  <a class="navbar-brand h1">HEXACORP</a>
+		  <a class="navbar-brand h1" href="/">HEXACORP</a>
 		  <!-- <br> -->
 		  <h4>HR</h4>
 		  </form>
@@ -325,7 +330,7 @@ $(document).on("click", ".action-buttons .dropdown-menu", function(e){
             <button type="submit" class="btn btn-success btn-lg btn-block">Login Now</button>
         </div>
     </form>
-	<div class="text-center">Don't have an account? <a href="hr_register.html">Sign up</a></div>
+	<div class="text-center">Don't have an account? <a href="/hr_register">Sign up</a></div>
 </div>
 </body>
 </html>
